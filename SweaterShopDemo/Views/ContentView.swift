@@ -11,13 +11,16 @@ struct ContentView: View {
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(productList, id: \.self) { item in
-                    ProductCard(product: item)
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(productList, id: \.self) { item in
+                        ProductCard(product: item)
+                    }
                 }
+                .padding()
             }
-            .padding()
+            .navigationTitle("Sweater Shop")
         }
     }
 }
