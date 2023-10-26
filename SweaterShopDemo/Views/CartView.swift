@@ -13,7 +13,22 @@ struct CartView: View {
     
     var body: some View {
         ScrollView {
-            Text("Your cart is empty")
+            if cartManager.products.count > 0 {
+                ForEach(cartManager.products, id: \.id) { items in
+                    ProductRow(product: items)
+                }
+                
+                HStack {
+                    Text("Your cart total is")
+                    Spacer()
+                    Text("Rp. \(cartManager.total)")
+                        .bold()
+                }
+                .padding()
+                
+            } else {
+                Text("Your cart is empty")
+            }
         }
         .navigationTitle("My Cart")
         .padding(.top )
