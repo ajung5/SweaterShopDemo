@@ -24,7 +24,11 @@ struct ProductRow: View {
                 Text(product.name)
                     .bold()
                 
-                Text("Rp. \(product.price)")
+                HStack {
+                    Text("Rp. \(product.price)")
+                    Text("x")
+                    Text("2")
+                }
             }
             
             Spacer()
