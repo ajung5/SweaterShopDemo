@@ -15,6 +15,7 @@
 		97E0DA562AEA8E7D0039668E /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0DA552AEA8E7D0039668E /* ProductCard.swift */; };
 		97E0DA592AEA981E0039668E /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0DA582AEA981E0039668E /* CartButton.swift */; };
 		97E0DA5B2AEA99BC0039668E /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0DA5A2AEA99BC0039668E /* CartView.swift */; };
+		97E0DA5D2AEA9ABE0039668E /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0DA5C2AEA9ABE0039668E /* CartManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		97E0DA552AEA8E7D0039668E /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		97E0DA582AEA981E0039668E /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		97E0DA5A2AEA99BC0039668E /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		97E0DA5C2AEA9ABE0039668E /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				973C8FB02AEA4AA6007B0DDC /* SweaterShopDemoApp.swift */,
+				97E0DA5C2AEA9ABE0039668E /* CartManager.swift */,
 				97E0DA572AEA91FA0039668E /* Views */,
 				97E0DA542AEA8E670039668E /* Components */,
 				973C8FBE2AEA520F007B0DDC /* Models */,
@@ -175,6 +178,7 @@
 			files = (
 				97E0DA5B2AEA99BC0039668E /* CartView.swift in Sources */,
 				973C8FB32AEA4AA6007B0DDC /* ContentView.swift in Sources */,
+				97E0DA5D2AEA9ABE0039668E /* CartManager.swift in Sources */,
 				973C8FB12AEA4AA6007B0DDC /* SweaterShopDemoApp.swift in Sources */,
 				973C8FC02AEA5222007B0DDC /* Product.swift in Sources */,
 				97E0DA562AEA8E7D0039668E /* ProductCard.swift in Sources */,

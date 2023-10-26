@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     
+   
     var product: Product
     
     var body: some View {
@@ -54,4 +55,5 @@ struct ProductCard: View {
 
 #Preview {
     ProductCard(product: productList[0])
+        
 }
