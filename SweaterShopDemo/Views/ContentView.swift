@@ -21,6 +21,9 @@ struct ContentView: View {
                 .padding()
             }
             .navigationTitle("Sweater Shop")
+            .toolbar {
+                CartButton(numberOfPrroducts: 1)
+            }
         }
     }
 }
