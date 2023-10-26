@@ -12,6 +12,7 @@
 		973C8FB52AEA4AA8007B0DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973C8FB42AEA4AA8007B0DDC /* Assets.xcassets */; };
 		973C8FB82AEA4AA8007B0DDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973C8FB72AEA4AA8007B0DDC /* Preview Assets.xcassets */; };
 		973C8FC02AEA5222007B0DDC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C8FBF2AEA5222007B0DDC /* Product.swift */; };
+		97E0DA562AEA8E7D0039668E /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0DA552AEA8E7D0039668E /* ProductCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		973C8FB42AEA4AA8007B0DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		973C8FB72AEA4AA8007B0DDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		973C8FBF2AEA5222007B0DDC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		97E0DA552AEA8E7D0039668E /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				973C8FB02AEA4AA6007B0DDC /* SweaterShopDemoApp.swift */,
 				973C8FB22AEA4AA6007B0DDC /* ContentView.swift */,
+				97E0DA542AEA8E670039668E /* Components */,
 				973C8FBE2AEA520F007B0DDC /* Models */,
 				973C8FB42AEA4AA8007B0DDC /* Assets.xcassets */,
 				973C8FB62AEA4AA8007B0DDC /* Preview Content */,
@@ -76,6 +79,14 @@
 				973C8FBF2AEA5222007B0DDC /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		97E0DA542AEA8E670039668E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				97E0DA552AEA8E7D0039668E /* ProductCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				973C8FB32AEA4AA6007B0DDC /* ContentView.swift in Sources */,
 				973C8FB12AEA4AA6007B0DDC /* SweaterShopDemoApp.swift in Sources */,
 				973C8FC02AEA5222007B0DDC /* Product.swift in Sources */,
+				97E0DA562AEA8E7D0039668E /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
