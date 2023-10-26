@@ -22,7 +22,12 @@ struct ContentView: View {
             }
             .navigationTitle("Sweater Shop")
             .toolbar {
-                CartButton(numberOfPrroducts: 1)
+                NavigationLink {
+                    CartView()
+                } label: {
+                    CartButton(numberOfPrroducts: 1)
+                }
+
             }
         }
     }
