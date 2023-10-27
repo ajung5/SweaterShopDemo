@@ -45,7 +45,7 @@ class CartManager: ObservableObject {
         if let removeProduct = products.firstIndex(where: {$0.id == product.id}) {
                     products.remove(at: removeProduct)
                     total -= product.price
-                }
+        }
     }
     
     func updateQuantity(for product: Product, newQuantity: Int) {

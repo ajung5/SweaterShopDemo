@@ -34,7 +34,7 @@ struct ProductRow: View {
                     }
                 }
                 
-                .onChange(of: product.quantity) { newValue in
+                .onChange(of: product.quantity) { _, newValue in
                     cartManager.updateQuantity(for: product, newQuantity: newValue)
                 }
             }
