@@ -13,6 +13,7 @@ struct Product: Identifiable, Hashable {
     var name: String
     var imageName: String
     var price: Int
+    var quantity: Int = 1
 }
 
 var productList: [Product] = [

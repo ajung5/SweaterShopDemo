@@ -27,7 +27,7 @@ struct ProductRow: View {
                 HStack {
                     Text("Rp. \(product.price)")
                     Text("x")
-                    Text("2")
+                    Text(("\(product.quantity)"))
                 }
             }
             
