@@ -10,6 +10,7 @@ import Foundation
 class CartManager: ObservableObject {
     @Published private(set) var products: [Product] = []
     @Published private(set) var total: Int = 0
+    @Published var cart: [Product] = []
     // @Published private(set) var quantity: Int = 0
     
     func addToCart(product: Product) {
@@ -18,16 +19,24 @@ class CartManager: ObservableObject {
 //            total += product.price
 //        } else {
 //            products.append(product)
-//            total += product.price
 //        }
+//        total += product.price
         
-        if let existingProductIndex = products.firstIndex(where: { $0.id == product.id }) {
-                   products[existingProductIndex].quantity += 1
-               } else {
-                   products.append(product)
-               }
-
-               total += product.price
+//        if let existingProductIndex = products.firstIndex(where: { $0.id == product.id }) {
+//                   products[existingProductIndex].quantity += 1
+//               } else {
+//                   products.append(product)
+//               }
+//
+//               total += product.price
+        
+        if let index = products.firstIndex(where: { $0.name == product.name }) {
+            products[index].quantity += 1
+            products[index].price += product.price
+        } else {
+            products.append(product)
+        }
+        total += product.price
 
     }
     
@@ -37,5 +46,11 @@ class CartManager: ObservableObject {
                     products.remove(at: removeProduct)
                     total -= product.price
                 }
+    }
+    
+    func updateQuantity(for product: Product, newQuantity: Int) {
+        if let index = cart.firstIndex(where: { $0.id == product.id }) {
+            cart[index].quantity = newQuantity
+        }
     }
 }

@@ -10,10 +10,11 @@ import SwiftUI
 struct ProductRow: View {
     
     @EnvironmentObject var cartManager: CartManager
+    @State var kuantitas: Int
     var product: Product
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(alignment: .top,spacing: 20) {
             Image(product.imageName)
                 .resizable()
                 .scaledToFit()
@@ -27,11 +28,16 @@ struct ProductRow: View {
                 HStack {
                     Text("Rp. \(product.price)")
                     Text("x")
-                    Text(("\(product.quantity)"))
+                    Text("\(product.quantity)")
+                    Stepper(value: $kuantitas, in: 0...Int.max, step: 1) {
+        
+                    }
+                }
+                
+                .onChange(of: product.quantity) { newValue in
+                    cartManager.updateQuantity(for: product, newQuantity: newValue)
                 }
             }
-            
-            Spacer()
             
             Image(systemName: "trash")
                 .foregroundStyle(.red)
@@ -41,10 +47,14 @@ struct ProductRow: View {
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .onAppear {
+            kuantitas = product.quantity
+        }
+
     }
 }
 
 #Preview {
-    ProductRow(product: productList[2])
+    ProductRow(kuantitas: 0, product: productList[2])
         .environmentObject(CartManager())
 }

@@ -15,7 +15,7 @@ struct CartView: View {
         ScrollView {
             if cartManager.products.count > 0 {
                 ForEach(cartManager.products, id: \.id) { items in
-                    ProductRow(product: items)
+                    ProductRow(kuantitas: 1, product: items)
                 }
                 
                 HStack {
