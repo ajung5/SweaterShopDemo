@@ -27,16 +27,26 @@ struct ProductRow: View {
                 
                 HStack {
                     Text("Rp. \(product.price)")
-                    Text("x")
-                    Text("\(product.quantity)")
+//                    Text("x")
+//                    Text("\(product.quantity)")
                     Stepper(value: $kuantitas, in: 0...Int.max, step: 1) {
-        
+                        Text("x \(kuantitas)")
                     }
                 }
                 
-                .onChange(of: product.quantity) { _, newValue in
-                    cartManager.updateQuantity(for: product, newQuantity: newValue)
-                }
+//                .onChange(of: product.quantity) { _, newValue in
+//                    cartManager.updateQuantity(for: product, newQuantity: newValue)
+//                }
+                
+//                .onChange(of: kuantitas) {_, newValue in
+//                    product.quantity = newValue
+//                    cartManager.updateQuantity(for: product, newQuantity: newValue)
+//                }
+                
+//                .onChange(of: kuantitas) {_, newValue in
+//                    self.kuantitas = newValue
+//                    self.cartManager.updateQuantity(for: product, newQuantity: newValue)
+//                }
             }
             
             Image(systemName: "trash")

@@ -14,21 +14,6 @@ class CartManager: ObservableObject {
     // @Published private(set) var quantity: Int = 0
     
     func addToCart(product: Product) {
-//        if var existingProduct = products.first(where: { $0.id == product.id }) {
-//            existingProduct.quantity += 1
-//            total += product.price
-//        } else {
-//            products.append(product)
-//        }
-//        total += product.price
-        
-//        if let existingProductIndex = products.firstIndex(where: { $0.id == product.id }) {
-//                   products[existingProductIndex].quantity += 1
-//               } else {
-//                   products.append(product)
-//               }
-//
-//               total += product.price
         
         if let index = products.firstIndex(where: { $0.name == product.name }) {
             products[index].quantity += 1
@@ -49,8 +34,18 @@ class CartManager: ObservableObject {
     }
     
     func updateQuantity(for product: Product, newQuantity: Int) {
+//        if let index = cart.firstIndex(where: { $0.id == product.id }) {
+//            cart[index].quantity = newQuantity
+//        }
+        
         if let index = cart.firstIndex(where: { $0.id == product.id }) {
             cart[index].quantity = newQuantity
+            // Assuming the 'product' has a 'price' property
+            let updatedPrice = product.price * newQuantity
+            cart[index].price = updatedPrice
         }
+        // After updating the quantity, recalculate the total
+        objectWillChange.send()
+
     }
 }
